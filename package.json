@@ -8,7 +8,9 @@
   },
   "peerDependencies": {
     "react": "^16.6.1",
-    "react-native": "^0.57.5"
+    "react-native": "^0.57.5",
+    "expo": "~50.0.14",
+    "expo-image": "^1.10.6"
   },
   "description": "A sprite sheet animation library for React Native",
   "main": "index.js",

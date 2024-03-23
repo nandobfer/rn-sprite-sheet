@@ -1,4 +1,5 @@
-import { Animated, Easing, Image as NativeImage, Platform, View } from 'react-native';
+import { Animated, Easing, Platform, View } from 'react-native';
+import { Image as NativeImage } from 'expo-image';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -59,17 +60,8 @@ export default class SpriteSheet extends React.PureComponent {
     this.time = new Animated.Value(0);
     this.interpolationRanges = {};
 
-    let {
-      source,
-      height,
-      width,
-      rows,
-      columns,
-      frameHeight,
-      frameWidth,
-      offsetY,
-      offsetX,
-    } = this.props;
+    let { source, height, width, rows, columns, frameHeight, frameWidth, offsetY, offsetX } =
+      this.props;
     let image = resolveAssetSource(source);
     let ratio = 1;
     let imageHeight = image.height;
@@ -106,15 +98,8 @@ export default class SpriteSheet extends React.PureComponent {
   }
 
   render() {
-    let {
-      imageHeight,
-      imageWidth,
-      frameHeight,
-      frameWidth,
-      animationType,
-      offsetX,
-      offsetY,
-    } = this.state;
+    let { imageHeight, imageWidth, frameHeight, frameWidth, animationType, offsetX, offsetY } =
+      this.state;
     let { viewStyle, imageStyle, source, onLoad } = this.props;
 
     let {
